@@ -15,19 +15,20 @@
   <div class="field">
     <%= form.label :company_name, "Company Name:"%>
     <%= form.text_field :company_name %>
-  </div>
+  </div></br>
 
   <div class="field">
     <%= form.label :applied_from, "Applied From:" %>
-    <%= form.select :applied_from, [['basic', 'basic'], ['advanced', 'advanced'], ['very advanced', 'very advanced']], {}, :"data-selects-visibility" => ".sub_form" %>
+    <%= form.select :applied_from, [['LinkedIn', 'LinkedIn'], ['Job Portal', 'Job Portal'], ['Company Website', 'Company Website']], {}, :"data-selects-visibility" => ".sub_form" %>
     <%= form.text_field :applied_from %>
+    
 
-  </div>
+  </div></br>
 
   <div class="field">
     <%= form.label :date_of_application, "Date Of Application:" %>
     <%= form.date_select :date_of_application %>
-  </div>
+  </div></br>
 
   <div class="field">
     <b>Status:</b>
@@ -35,11 +36,11 @@
     <%= form.radio_button :status, true %>
     <%= form.label :status, "Not Applied" %>
     <%= form.radio_button :status, false %>
-  </div>
+  </div></br>
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+  </div></br>
 <% end %>
 </html>
 
