@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <a href="#" class="d-flex align-items-center text-success text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 
                         <% if user_signed_in? %>
@@ -16,7 +16,5 @@
                           <%#= link_to "Sign up", new_user_registration_path,class:"btn btn-dark" %> 
                           <%= link_to "Login", new_user_session_path,class:"btn btn-dark" %></li>
                           <% end %>
-=======
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
->>>>>>> 634fd7cc21809c4f33dfbd305552c01bf07ed5b4
+
+<%= link_to "interview reminder",interview_reminders_path ,class: "btn btn-dark" %>

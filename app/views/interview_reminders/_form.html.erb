@@ -1,0 +1,37 @@
+<%= form_with(model: interview_reminder) do |form| %>
+  <% if interview_reminder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(interview_reminder.errors.count, "error") %> prohibited this interview_reminder from being saved:</h2>
+
+      <ul>
+        <% interview_reminder.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_name %>
+    <%= form.text_field :company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interview_date %>
+    <%= form.datetime_select :interview_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :questions %>
+    <%= form.text_field :questions %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

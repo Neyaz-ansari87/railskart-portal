@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Interview Reminders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Interview date</th>
+      <th>Status</th>
+      <th>Questions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interview_reminders.each do |interview_reminder| %>
+      <tr>
+        <td><%= interview_reminder.company_name %></td>
+        <td><%= interview_reminder.interview_date %></td>
+        <td><%= interview_reminder.status %></td>
+        <td><%= interview_reminder.questions %></td>
+        <td><%= link_to 'Show', interview_reminder %></td>
+        <td><%= link_to 'Edit', edit_interview_reminder_path(interview_reminder) %></td>
+        <td><%= link_to 'Destroy', interview_reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Interview Reminder', new_interview_reminder_path %>

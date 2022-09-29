@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @interview_reminder.company_name %>
+</p>
+
+<p>
+  <strong>Interview date:</strong>
+  <%= @interview_reminder.interview_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @interview_reminder.status %>
+</p>
+
+<p>
+  <strong>Questions:</strong>
+  <%= @interview_reminder.questions %>
+</p>
+
+<%= link_to 'Edit', edit_interview_reminder_path(@interview_reminder) %> |
+<%= link_to 'Back', interview_reminders_path %>
