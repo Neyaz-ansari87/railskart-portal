@@ -65,6 +65,6 @@ class InterviewRemindersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def interview_reminder_params
-      params.require(:interview_reminder).permit(:company_name, :interview_date, :status, :questions)
+      params.require(:interview_reminder).permit(:company_name, :interview_date, :status, :questions,:remark)
     end
 end

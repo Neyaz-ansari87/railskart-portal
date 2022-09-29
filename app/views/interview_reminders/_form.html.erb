@@ -20,17 +20,24 @@
     <%= form.label :interview_date %>
     <%= form.datetime_select :interview_date %>
   </div>
+ <div class="field">
+    <%= form.label :remark %>
+    <%= form.text_field :remark %>
+  </div>
 
-  <div class="field">
+<div class="field">
     <%= form.label :status %>
     <%= form.check_box :status %>
   </div>
-
-  <div class="field">
+   <% if interview_reminder.status == true %> 
+                
+      <div class="field">
     <%= form.label :questions %>
     <%= form.text_field :questions %>
-  </div>
-
+  </div>           
+<%else%>
+<h5> "Please update the check box after interview close"</h5>
+ <%end%>
   <div class="actions">
     <%= form.submit %>
   </div>
