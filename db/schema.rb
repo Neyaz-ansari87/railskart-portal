@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_09_28_123834) do
 
   create_table "portals", force: :cascade do |t|
@@ -32,5 +33,11 @@ ActiveRecord::Schema.define(version: 2022_09_28_123834) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+=======
+ActiveRecord::Schema.define(version: 0) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+>>>>>>> 634fd7cc21809c4f33dfbd305552c01bf07ed5b4
 
 end
