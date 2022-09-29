@@ -52,6 +52,6 @@ development:
 production:
   <<: *default
   host: localhost
-  database: portal123_development
+  database: portal_tesk_development
   username: ubuntu
   password: root
