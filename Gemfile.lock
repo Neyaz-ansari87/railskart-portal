@@ -233,11 +233,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-<<<<<<< HEAD
-  pg (~> 1.1)
-=======
   pg
->>>>>>> 4d4ce557f1b3c23e1954736c983db93d61653334
   puma (~> 3.11)
   rails (~> 6.1.5)
   sass-rails (~> 5.0)
