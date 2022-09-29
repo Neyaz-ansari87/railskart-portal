@@ -1,10 +1,10 @@
 
 # SQLite. Versions 3.8.0 and up are supported.
 #   gem install sqlite3
-#
+
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem "sqlite3"
-#
+
 # default: &default
 #   adapter: sqlite3
 
@@ -44,14 +44,13 @@ default: &default
 development:
   <<: *default
   host: localhost
-  database: portal_development
-
+  database: railskart-portal_development`
   username: neyazshadbox
   password: 1234
 
 production:
   <<: *default
   host: localhost
-  database: portal_tesk_development
+  database: railskart-portal_tesk_development
   username: ubuntu
   password: root

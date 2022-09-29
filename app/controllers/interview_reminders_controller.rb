@@ -1,6 +1,6 @@
 class InterviewRemindersController < ApplicationController
   before_action :set_interview_reminder, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!
   # GET /interview_reminders or /interview_reminders.json
   def index
     @interview_reminders = InterviewReminder.all
