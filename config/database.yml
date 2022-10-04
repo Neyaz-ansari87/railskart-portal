@@ -44,11 +44,9 @@ default: &default
 development:
   <<: *default
   host: localhost
-<<<<<<< HEAD
   database: portal_development
-=======
   database: railskart-portal_development`
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
+
   username: neyazshadbox
   password: 1234
 
