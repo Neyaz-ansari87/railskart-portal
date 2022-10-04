@@ -10,19 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_29_104050) do
+ActiveRecord::Schema.define(version: 2022_10_03_133142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "interview_reminders", force: :cascade do |t|
     t.string "company_name"
+    t.string "applied_by"
     t.datetime "interview_date"
-    t.boolean "status"
-    t.string "questions"
+    t.string "duration"
+    t.string "interview_round"
+    t.string "question"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "remark"
+    t.boolean "status", default: false
   end
 
   create_table "portals", force: :cascade do |t|

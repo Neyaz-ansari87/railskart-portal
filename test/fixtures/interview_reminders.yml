@@ -2,7 +2,6 @@
 
 one:
   company_name: MyString
-<<<<<<< HEAD
   applied_by: MyString
   interview_date: 2022-10-03 16:41:25
   duration: MyString
@@ -16,7 +15,7 @@ two:
   duration: MyString
   interview_round: MyString
   question: MyString
-=======
+
   interview_date: 2022-09-29 12:27:49
   status: false
   questions: MyString
@@ -26,4 +25,4 @@ two:
   interview_date: 2022-09-29 12:27:49
   status: false
   questions: MyString
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
+

@@ -1,10 +1,6 @@
 class InterviewRemindersController < ApplicationController
   before_action :set_interview_reminder, only: %i[ show edit update destroy ]
-<<<<<<< HEAD
-
-=======
   before_action :authenticate_user!
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
   # GET /interview_reminders or /interview_reminders.json
   def index
     @interview_reminders = InterviewReminder.all
@@ -26,12 +22,10 @@ class InterviewRemindersController < ApplicationController
   # POST /interview_reminders or /interview_reminders.json
   def create
     @interview_reminder = InterviewReminder.new(interview_reminder_params)
-<<<<<<< HEAD
+
     # debugger
     # MailServiceMailer.one_hour(@interview_reminder).deliver_now
-=======
 
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
     respond_to do |format|
       if @interview_reminder.save
         format.html { redirect_to interview_reminder_url(@interview_reminder), notice: "Interview reminder was successfully created." }
@@ -39,10 +33,7 @@ class InterviewRemindersController < ApplicationController
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @interview_reminder.errors, status: :unprocessable_entity }
-<<<<<<< HEAD
-        
-=======
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
+
       end
     end
   end
@@ -70,7 +61,7 @@ class InterviewRemindersController < ApplicationController
     end
   end
 
-<<<<<<< HEAD
+
   def done
       @interview_reminder = InterviewReminder.find_by(id:params[:id])
       @interview_reminder.update(status:true)
@@ -78,8 +69,7 @@ class InterviewRemindersController < ApplicationController
       redirect_to interview_reminders_path
   end  
 
-=======
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_interview_reminder
@@ -88,10 +78,9 @@ class InterviewRemindersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def interview_reminder_params
-<<<<<<< HEAD
+
       params.require(:interview_reminder).permit(:company_name, :applied_by, :interview_date, :duration, :interview_round, :question)
-=======
       params.require(:interview_reminder).permit(:company_name, :interview_date, :status, :questions,:remark)
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
+
     end
 end

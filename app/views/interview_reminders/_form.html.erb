@@ -10,18 +10,13 @@
       </ul>
     </div>
   <% end %>
-<<<<<<< HEAD
 <div class="card p-4" style="background-color:#ABEBC6;">
-=======
-
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
   <div class="field">
     <%= form.label :company_name %>
     <%= form.text_field :company_name %>
   </div>
 
   <div class="field">
-<<<<<<< HEAD
     <%= form.label :applied_by %>
     <%= form.text_field :applied_by %>
   </div>
@@ -46,34 +41,8 @@
     <%= form.cktext_area :question %>
   </div>
 
-=======
-    <%= form.label :interview_date %>
-    <%= form.datetime_select :interview_date %>
-  </div>
- <div class="field">
-    <%= form.label :remark %>
-    <%= form.text_field :remark %>
-  </div>
-
-<div class="field">
-    <%= form.label :status %>
-    <%= form.check_box :status %>
-  </div>
-   <% if interview_reminder.status == true %> 
-                
-      <div class="field">
-    <%= form.label :questions %>
-    <%= form.text_field :questions %>
-  </div>           
-<%else%>
-<h5> "Please update the check box after interview close"</h5>
- <%end%>
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
-<<<<<<< HEAD
 </div>
-=======
->>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
