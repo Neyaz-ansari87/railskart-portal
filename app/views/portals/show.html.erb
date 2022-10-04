@@ -17,6 +17,10 @@
   <%= @portal.applied_from %>
 </p>
 
+<p>
+  <strong>Applied Link:</strong>
+  <%= link_to 'Visit Url', "http://#{@portal.applied_from_link}" %>
+</p>
 
 <p>
   <strong>Date Of Application:</strong>

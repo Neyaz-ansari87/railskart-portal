@@ -1,9 +1,12 @@
 class PortalsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_portal, only: %i[ show edit update destroy ]
 
   # GET /portals or /portals.json
   def index
-    @portals = Portal.all
+ 
+    @portals = Portal.all.where(id: current_user.portal_ids)
+    
   end
 
   # GET /portals/1 or /portals/1.json
@@ -65,6 +68,6 @@ class PortalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def portal_params
-      params.require(:portal).permit(:company_name, :applied_from, :date_of_application, :status)
+      params.require(:portal).permit(:company_name, :applied_from, :applied_from_link, :date_of_application, :status, :user_id)
     end
 end
