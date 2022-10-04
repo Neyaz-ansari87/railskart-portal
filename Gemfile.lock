@@ -106,8 +106,13 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.11.0)
+    et-orbi (1.2.7)
+      tzinfo
     execjs (2.8.1)
     ffi (1.15.5)
+    fugit (1.6.0)
+      et-orbi (~> 1, >= 1.2.7)
+      raabro (~> 1.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -137,6 +142,7 @@ GEM
     pg (1.4.3)
     public_suffix (5.0.0)
     puma (3.12.6)
+    raabro (1.4.0)
     racc (1.6.0)
     rack (2.2.4)
     rack-test (2.0.2)
@@ -177,6 +183,8 @@ GEM
       railties (>= 5.0)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    rufus-scheduler (3.8.2)
+      fugit (~> 1.1, >= 1.1.6)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -244,6 +252,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 6.1.5)
+  rufus-scheduler (~> 3.2)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

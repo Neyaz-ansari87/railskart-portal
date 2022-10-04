@@ -35,7 +35,7 @@ development:
   <<: *default
   host: localhost
   database: portal_development
-  username: root
+  username: neyazshadbox
   password: 1234
 
 production:

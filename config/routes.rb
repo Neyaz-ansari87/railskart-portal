@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :interview_reminders do
+  member do
+    get :done
+    end
+  end
   resources :portals
   root 'home#index'
   devise_for :users

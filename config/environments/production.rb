@@ -91,4 +91,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+config.action_mailer.default_url_options = { :host => "https://railskart-portal.herokuapp.com" }
+config.action_mailer.default_options = {from: 'hr@railskart.com'}
+config.action_mailer.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings =
+  {
+
+    :address            => 'smtpout.secureserver.net',
+    :port               => 25,
+    :domain             => 'heroku.com', #you can also use google.com
+    :authentication     => :login,
+    :user_name          => 'hr@railskart.com',
+    :password           => 'Shahnawaz786@!#',
+    :enable_starttls_auto => false
+
+  }  
 end
