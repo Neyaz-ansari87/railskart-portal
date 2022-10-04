@@ -17,7 +17,11 @@ class InterviewRemindersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create interview_reminder" do
     assert_difference('InterviewReminder.count') do
+<<<<<<< HEAD
       post interview_reminders_url, params: { interview_reminder: { applied_by: @interview_reminder.applied_by, company_name: @interview_reminder.company_name, duration: @interview_reminder.duration, interview_date: @interview_reminder.interview_date, interview_round: @interview_reminder.interview_round, question: @interview_reminder.question } }
+=======
+      post interview_reminders_url, params: { interview_reminder: { company_name: @interview_reminder.company_name, interview_date: @interview_reminder.interview_date, questions: @interview_reminder.questions, status: @interview_reminder.status } }
+>>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
     end
 
     assert_redirected_to interview_reminder_url(InterviewReminder.last)
@@ -34,7 +38,11 @@ class InterviewRemindersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update interview_reminder" do
+<<<<<<< HEAD
     patch interview_reminder_url(@interview_reminder), params: { interview_reminder: { applied_by: @interview_reminder.applied_by, company_name: @interview_reminder.company_name, duration: @interview_reminder.duration, interview_date: @interview_reminder.interview_date, interview_round: @interview_reminder.interview_round, question: @interview_reminder.question } }
+=======
+    patch interview_reminder_url(@interview_reminder), params: { interview_reminder: { company_name: @interview_reminder.company_name, interview_date: @interview_reminder.interview_date, questions: @interview_reminder.questions, status: @interview_reminder.status } }
+>>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
     assert_redirected_to interview_reminder_url(@interview_reminder)
   end
 

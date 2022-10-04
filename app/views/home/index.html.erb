@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="card">
   <div class="card-header text-center card shadow">
   <h1>Home Page</h1>
@@ -9,3 +10,25 @@
 <%= link_to 'interview reminder',interview_reminders_path,class:"btn btn-outline-primary" %>
 
 <%= link_to 'Railskart Portal',portals_path ,class: "btn btn-outline-primary" %>
+=======
+
+<a href="#" class="d-flex align-items-center text-success text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        <% if user_signed_in? %>
+                     <!--    <img src="https://github.com/mdo.png" alt="hugenerd" width="28" height="28" class="rounded-circle"> -->
+
+                        <span class="d-none d-sm-inline mx-1"><%= current_user.email %></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                      <!--   <li><a class="dropdown-item" href="#">New project...</a></li>-->
+                   <!--      <li><a class="dropdown-item" href="#">Profile</a></li> -->
+                        <li><a class="dropdown-item" href="#"><%= link_to 'Edit profile', edit_user_registration_path %></a></li>
+
+                        <li> <%= link_to "Logout", destroy_user_session_path, method: :delete%>
+                          <% else %>
+                          <%#= link_to "Sign up", new_user_registration_path,class:"btn btn-dark" %> 
+                          <%= link_to "Login", new_user_session_path,class:"btn btn-dark" %></li>
+                          <% end %>
+
+<%= link_to "interview reminder",interview_reminders_path ,class: "btn btn-dark" %>
+>>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5

@@ -1,4 +1,5 @@
 class MailServiceMailer < ApplicationMailer
+<<<<<<< HEAD
 	default from: 'hr@railskart.com'
 
 	 def one_hour(interview_reminder)
@@ -39,4 +40,6 @@ class MailServiceMailer < ApplicationMailer
     mail(to: @user.try(:email),cc:@user.email,subject: "posted an application for leave.")
 	 	
 	 end
+=======
+>>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
 end

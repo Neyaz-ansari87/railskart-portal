@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- <p id="notice"><%= notice %></p>
 <div class="container">
 <table class="table table-striped responsive text-center" >  -->
@@ -7,12 +8,17 @@
   </div>
   <div class="card-body">
     
+=======
+<p id="notice"><%= notice %></p>
+
+>>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
 <p>
   <strong>Company name:</strong>
   <%= @interview_reminder.company_name %>
 </p>
 
 <p>
+<<<<<<< HEAD
   <strong>Applied by:</strong>
   <%= @interview_reminder.applied_by %>
 </p>
@@ -47,3 +53,26 @@
     @railskart.com
   </div>
 </div>
+=======
+  <strong>Interview date:</strong>
+  <%= @interview_reminder.interview_date %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @interview_reminder.remark %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @interview_reminder.status %>
+</p>
+
+<p>
+  <strong>Questions:</strong>
+  <%= @interview_reminder.questions %>
+</p>
+
+<%= link_to 'Edit', edit_interview_reminder_path(@interview_reminder) %> |
+<%= link_to 'Back', interview_reminders_path %>
+>>>>>>> 59b0e8f8d6ee3f8182b2cb1767a8da9acee52db5
