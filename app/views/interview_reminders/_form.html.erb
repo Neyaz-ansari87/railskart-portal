@@ -1,0 +1,48 @@
+<%= form_with(model: interview_reminder) do |form| %>
+  <% if interview_reminder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(interview_reminder.errors.count, "error") %> prohibited this interview_reminder from being saved:</h2>
+
+      <ul>
+        <% interview_reminder.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="card p-4" style="background-color:#ABEBC6;">
+  <div class="field">
+    <%= form.label :company_name %>
+    <%= form.text_field :company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :applied_by %>
+    <%= form.text_field :applied_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interview_date %>
+    <%= form.datetime_select :interview_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interview_round %>
+    <%= form.text_field :interview_round %>
+  </div>
+
+  <div class="field">
+    <%= form.label :question %>
+    <%= form.cktext_area :question %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

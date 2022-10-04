@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  applied_by: MyString
+  interview_date: 2022-10-03 16:41:25
+  duration: MyString
+  interview_round: MyString
+  question: MyString
+
+two:
+  company_name: MyString
+  applied_by: MyString
+  interview_date: 2022-10-03 16:41:25
+  duration: MyString
+  interview_round: MyString
+  question: MyString

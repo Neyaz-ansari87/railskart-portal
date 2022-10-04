@@ -66,3 +66,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'rufus-scheduler', '~> 3.2'

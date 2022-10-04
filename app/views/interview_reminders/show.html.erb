@@ -1,0 +1,49 @@
+<!-- <p id="notice"><%= notice %></p>
+<div class="container">
+<table class="table table-striped responsive text-center" >  -->
+    <div class="card text-center">
+  <div class="card-header">
+    <p id="notice"><%= notice %></p>
+  </div>
+  <div class="card-body">
+    
+<p>
+  <strong>Company name:</strong>
+  <%= @interview_reminder.company_name %>
+</p>
+
+<p>
+  <strong>Applied by:</strong>
+  <%= @interview_reminder.applied_by %>
+</p>
+
+<p>
+  <strong>Interview date:</strong>
+  <%= @interview_reminder.interview_date.strftime("%Y-%m-%d %I:%M") %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @interview_reminder.duration %>
+</p>
+
+<p>
+  <strong>Interview round:</strong>
+  <%= @interview_reminder.interview_round %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @interview_reminder.question %>
+</p>
+
+<%= link_to 'Reschedule interview', edit_interview_reminder_path(@interview_reminder), class:"btn btn-outline-success " %> |
+<%= link_to 'Back', interview_reminders_path , class:"btn btn-outline-primary"%>
+</table>
+
+<div>
+  </div>
+  <div class="card-footer text-muted">
+    @railskart.com
+  </div>
+</div>
