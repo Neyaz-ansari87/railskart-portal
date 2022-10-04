@@ -42,18 +42,18 @@
   <tbody>
     <% @portals.each do | portal| %>
     <tr>
-      <td><%= portal.company_name %></td>
-      <td><%= portal.applied_from %></td>
-      <td><%= link_to 'Visit Url', "http://#{portal.applied_from_link}", class:"btn btn" %></td>
-      <td><%= portal.date_of_application %></td>
-      <td> <% if portal.status == true %> 
+        <td><%= portal.company_name %></td>
+        <td><%= portal.applied_from %></td>
+        <td><%= link_to 'Visit Url', "http://#{portal.applied_from_link}", class:"btn btn" %></td>
+        <td><%= portal.date_of_application %></td>
+        <td> <% if portal.status == true %>
                 Applied
                 <%else%>
                 Not Applied
                 <%end%>
-      </td>
-      <td><%= link_to "SHOW", portal,class:"btn btn-primary" %></td>
-    </tr>
+        </td>
+        <td><%= link_to "SHOW", portal,class:"btn btn-primary" %></td>
+      </tr>
         
   </tbody>
     <% end %>
@@ -63,6 +63,3 @@
 <div class="card-footer text-center">
   <%= link_to 'New Railskart Portal', new_portal_path, class:"btn btn-primary" %>
 </div>
-
-
-    
