@@ -63,7 +63,11 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.default_url_options = { :host => "localhost:3000" }
   #config.action_mailer.delivery_method = :letter_opener
+<<<<<<< HEAD
   config.action_mailer.raise_delivery_errors = false
+=======
+  config.action_mailer.raise_delivery_errors = true
+>>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {

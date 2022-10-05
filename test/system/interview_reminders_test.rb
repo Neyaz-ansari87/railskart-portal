@@ -14,12 +14,23 @@ class InterviewRemindersTest < ApplicationSystemTestCase
     visit interview_reminders_url
     click_on "New Interview Reminder"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
     fill_in "Applied by", with: @interview_reminder.applied_by
     fill_in "Company name", with: @interview_reminder.company_name
     fill_in "Duration", with: @interview_reminder.duration
     fill_in "Interview date", with: @interview_reminder.interview_date
     fill_in "Interview round", with: @interview_reminder.interview_round
     fill_in "Question", with: @interview_reminder.question
+<<<<<<< HEAD
+=======
+    fill_in "Company name", with: @interview_reminder.company_name
+    fill_in "Interview date", with: @interview_reminder.interview_date
+    fill_in "Questions", with: @interview_reminder.questions
+    check "Status" if @interview_reminder.status
+>>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
     click_on "Create Interview reminder"
 
     assert_text "Interview reminder was successfully created"
@@ -36,6 +47,15 @@ class InterviewRemindersTest < ApplicationSystemTestCase
     fill_in "Interview date", with: @interview_reminder.interview_date
     fill_in "Interview round", with: @interview_reminder.interview_round
     fill_in "Question", with: @interview_reminder.question
+<<<<<<< HEAD
+=======
+
+    fill_in "Company name", with: @interview_reminder.company_name
+    fill_in "Interview date", with: @interview_reminder.interview_date
+    fill_in "Questions", with: @interview_reminder.questions
+    check "Status" if @interview_reminder.status
+
+>>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
     click_on "Update Interview reminder"
 
     assert_text "Interview reminder was successfully updated"

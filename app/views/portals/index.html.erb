@@ -32,6 +32,7 @@
     <tr>
       <th>Company Name</th>
       <th>Applied From</th>
+      <th>Applied Link</th>
       <th>Date Of Application</th>
       <th>Status</th>
       <th colspan="3"></th>
@@ -43,8 +44,9 @@
     <tr>
         <td><%= portal.company_name %></td>
         <td><%= portal.applied_from %></td>
+        <td><%= link_to 'Visit Url', "http://#{portal.applied_from_link}", class:"btn btn" %></td>
         <td><%= portal.date_of_application %></td>
-        <td> <% if portal.status == true %> 
+        <td> <% if portal.status == true %>
                 Applied
                 <%else%>
                 Not Applied
@@ -67,6 +69,15 @@
 </div>
 
 
+<<<<<<< HEAD
     <!-- <div>
   <%#= link_to 'Home',root_path, class:"btn btn-outline-primary" %>
 </div> -->
+=======
+
+    <div>
+  <%= link_to 'Home',root_path, class:"btn btn-outline-primary" %>
+</div>
+
+
+>>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
