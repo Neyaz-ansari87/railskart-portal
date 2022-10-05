@@ -33,10 +33,10 @@ class MailServiceMailer < ApplicationMailer
 	 end
 	 def done(interview_reminder)
 	 	# debugger
-	@interview_reminder=interview_reminder
-    user=interview_reminder
-    @user=User.find_by(id:user)
-    mail(to: @user.try(:email),cc:@user.email,subject: "posted an application for leave.")
+	# @interview_reminder=interview_reminder
+ #    user=interview_reminder
+ #    @user=User.find_by(id:user)
+ #    mail(to: @user.try(:email),cc:@user.email,subject: "posted an application for leave.")
 	 	
 	 end
 end

@@ -1,3 +1,4 @@
 class InterviewReminder < ApplicationRecord
-	has_one :portal
+
+	belongs_to :user
 end

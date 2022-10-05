@@ -66,6 +66,8 @@ class InterviewRemindersController < ApplicationController
       redirect_to interview_reminders_path
   end  
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_interview_reminder
@@ -74,6 +76,6 @@ class InterviewRemindersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def interview_reminder_params
-      params.require(:interview_reminder).permit(:company_name, :applied_by, :interview_date, :duration, :interview_round, :question)
+      params.require(:interview_reminder).permit(:company_name, :applied_by, :interview_date, :duration, :interview_round, :question,:user_id)
     end
 end

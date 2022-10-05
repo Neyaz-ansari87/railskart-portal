@@ -57,6 +57,40 @@ class PortalsController < ApplicationController
     end
   end
 
+  def shedule_interview
+
+  @portal = Portal.find_by(id:params[:id])
+if @portal.update(status:true)
+        # debugger    
+     @interview_reminder = InterviewReminder.create!(user_id: @portal.user_id, company_name: @portal.company_name,applied_by: @portal.applied_from )
+
+     # @interview_reminder = InterviewReminder.find_by(id:params[:id])
+
+     redirect_to portal_path
+    else
+      render :new
+  end
+end
+
+
+ # def approve
+ #    # debugger
+ #      @portal = Portal.find_by(id:params[:id])
+ #      # debugger
+ #      if @portal.update(status:true)
+ #        # debugger    
+ #     @interview_reminder = InterviewReminder.create!(user_id: @portal.user_id, start: @portal.login_time)
+ #     # MailServiceMailer.approve_atten_req(@portal).deliver_now
+ #      redirect_to portals_path
+ #    else
+ #      render :new
+ #    end
+ #  end 
+
+
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_portal
@@ -65,6 +99,6 @@ class PortalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def portal_params
-      params.require(:portal).permit(:company_name, :applied_from, :date_of_application, :status)
+      params.require(:portal).permit(:company_name, :applied_from, :date_of_application, :status,:user_id)
     end
 end
