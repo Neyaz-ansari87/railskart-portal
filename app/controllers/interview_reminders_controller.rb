@@ -71,10 +71,29 @@ class InterviewRemindersController < ApplicationController
   def done
       @interview_reminder = InterviewReminder.find_by(id:params[:id])
       @interview_reminder.update(status:true)
-      MailServiceMailer.done(@interview_reminder).deliver_now
-      redirect_to interview_reminders_path
+      # MailServiceMailer.done(@interview_reminder).deliver_now
+      redirect_to interview_reminder_path
+
   end  
 
+def question
+
+  @interview_reminder = InterviewReminder.find_by(id:params[:id])
+ if @interview_reminder.update(status:true)
+
+ 
+        # debugger    
+     @interview_reminder = InterviewReminder.update(user_id: @portal.user_id, question: @interview_reminder.question)
+
+     # @interview_reminder = InterviewReminder.find_by(id:params[:id])
+
+     redirect_to interview_reminders_path
+    else
+      render :new
+  end
+
+  
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -87,7 +106,7 @@ class InterviewRemindersController < ApplicationController
       params.require(:interview_reminder).permit(:company_name, :applied_by, :interview_date, :duration, :interview_round, :question,:user_id)
 
 
-      params.require(:interview_reminder).permit(:company_name, :applied_by, :interview_date, :duration, :interview_round, :question)
+      # params.require(:interview_reminder).permit(:company_name, :applied_by, :interview_date, :duration, :interview_round, :question)
       params.require(:interview_reminder).permit(:company_name, :interview_date, :status, :questions,:remark)
 
     end

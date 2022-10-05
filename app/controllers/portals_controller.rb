@@ -65,11 +65,11 @@ class PortalsController < ApplicationController
   @portal = Portal.find_by(id:params[:id])
 if @portal.update(status:true)
         # debugger    
-     @interview_reminder = InterviewReminder.create!(user_id: @portal.user_id, company_name: @portal.company_name,applied_by: @portal.applied_from )
+     @interview_reminder = InterviewReminder.create!(user_id: @portal.user_id, company_name: @portal.company_name)
 
      # @interview_reminder = InterviewReminder.find_by(id:params[:id])
 
-     redirect_to portal_path
+     redirect_to  edit_interview_reminder_path @interview_reminder
     else
       render :new
   end

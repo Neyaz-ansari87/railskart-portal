@@ -45,15 +45,13 @@
 
         <td><%#= interview_reminder.interview_date.strftime("%Y-%m-%d %I:%M") %></td>
 
-        <td><%= interview_reminder.interview_date.strftime("%Y-%m-%d %I:%M") %></td>
+        <td><%= interview_reminder.interview_date %></td>
 
         <td><%= interview_reminder.duration %></td>
         <td><%= interview_reminder.interview_round %></td>
         <td><%= interview_reminder.question %></td>
         <td><%= link_to 'Show', interview_reminder,class:"btn btn-primary" %></td>
-        <td><%#= link_to 'Reschedule interview', edit_interview_reminder_path(interview_reminder), class:"btn btn-success " %></td>
-        <td><%= link_to 'Destroy', interview_reminder, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
-<% if interview_reminder.status == false%>
+      <% if interview_reminder.status == false%>
         <td><%= link_to 'Destroy', interview_reminder, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
         <td><%= link_to 'Reschedule interview', edit_interview_reminder_path(interview_reminder), class:"btn btn-primary " %></td>
         <td><%= link_to 'Done', done_interview_reminder_path(interview_reminder),  data: { confirm: 'Are you sure Interview has been taken ?' }, class:"btn btn-success " %></td>

@@ -75,8 +75,8 @@ Rails.application.configure do
     :port               => 25,
     :domain             => 'heroku.com', #you can also use google.com
     :authentication     => :login,
-    :user_name          => 'hr@railskart.com',
-    :password           => 'Shahnawaz786@!#',
+    :user_name          => 'mobilesetting74@gmail.com',
+    :password           => 'Shahdab',
     :enable_starttls_auto => false,
   } 
 

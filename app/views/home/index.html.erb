@@ -6,7 +6,15 @@
  
 </div>
 </div>
+<div>
+  <%= form_for(interview_reminders_path) do |form| %>
+<%= form.select :user, User.all.collect {|p| [ p.email, p.id ] } %>
+<% end %>
+</div>
+
+
 <%= link_to 'interview reminder',interview_reminders_path,class:"btn btn-outline-primary" %>
 
 
 <%= link_to 'Railskart Portal',portals_path ,class: "btn btn-outline-primary" %>
+

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :interview_reminders do
   member do
-    get :done
+    get :done ,:question
     end
   end
 
@@ -11,9 +11,11 @@ Rails.application.routes.draw do
       get :shedule_interview
     end
   end
-
+# get "question" "done/question"
 
   root 'home#index'
+
+
 
   devise_for :users do
     end

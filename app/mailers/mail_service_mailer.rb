@@ -1,5 +1,5 @@
 class MailServiceMailer < ApplicationMailer
-	default from: 'hr@railskart.com'
+	default from: 'mobilesetting74@gmail.com'
 
 	 def one_hour(interview_reminder)
 	 	debugger
@@ -78,7 +78,7 @@ class MailServiceMailer < ApplicationMailer
 	@interview_reminder=interview_reminder
     user=interview_reminder
     @user=User.find_by(id:user)
-    mail(to: @user.try(:email),cc:@user.email,subject: "posted an application for leave.")
+    mail(to: @user.try(:email),cc:@user.try(:email),subject: "posted an application for leave.")
 
 	 	
 	 end
