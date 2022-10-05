@@ -102,10 +102,9 @@ end
 
     # Only allow a list of trusted parameters through.
     def portal_params
-<<<<<<< HEAD
-      params.require(:portal).permit(:company_name, :applied_from, :date_of_application, :status,:user_id)
-=======
+
+
       params.require(:portal).permit(:company_name, :applied_from, :applied_from_link, :date_of_application, :status, :user_id)
->>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
+
     end
 end

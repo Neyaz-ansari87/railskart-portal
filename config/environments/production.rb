@@ -94,11 +94,8 @@ Rails.application.configure do
 
 config.action_mailer.default_url_options = { :host => "https://railskart-portal.herokuapp.com" }
 config.action_mailer.default_options = {from: 'hr@railskart.com'}
-<<<<<<< HEAD
-config.action_mailer.raise_delivery_errors = alse
-=======
+
 config.action_mailer.raise_delivery_errors = true
->>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
   ActionMailer::Base.smtp_settings =
   {
 

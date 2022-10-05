@@ -11,8 +11,7 @@
     </div>
   <% end %>
 <div class="card p-4" style="background-color:#ABEBC6;">
-  <div class="field">
-<<<<<<< HEAD
+
     <%# debugger %>
     <%= form.label :company_name %>
     <%= form.text_field :company_name%>
@@ -22,7 +21,7 @@
   <div class="field">
     <%= form.label :applied_by %>
     <%= form.text_field :applied_from %>
-=======
+
     <%= form.label :company_name %>
     <%= form.text_field :company_name %>
   </div>
@@ -30,7 +29,6 @@
   <div class="field">
     <%= form.label :applied_by %>
     <%= form.text_field :applied_by %>
->>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
   </div>
 
   <div class="field">
@@ -52,12 +50,11 @@
     <%= form.label :question %>
     <%= form.cktext_area :question %>
   </div>
-<<<<<<< HEAD
+
   <div class="field">
     <%= form.number_field :user_id,id: :interview_reminder_user_id, class:"form-control", value:current_user.id, type: :hidden %>
   </div>
-=======
->>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
+
 
   <div class="actions">
     <%= form.submit %>

@@ -53,9 +53,7 @@ scheduler = Rufus::Scheduler.new
 scheduler.in '3s' do
 
 	# debugger
-<<<<<<< HEAD
-  puts 'Hello... Rufus'
-=======
-  
->>>>>>> 6f92786a2693411576b8b7958fbe395123fa7e1c
+
+  puts 'Hello...'
+
 end
